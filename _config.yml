@@ -12,7 +12,7 @@
 
 theme                  : "minimal-mistakes-jekyll"
 # remote_theme 的部分，依照官方教學所說的，輸入
-remote_theme: "mmistakes/minimal-mistakes@4.18.1"
+# remote_theme: "mmistakes/minimal-mistakes@4.18.1"
 
 # repository 則須按照自己的 GitHub 做改變，其格式為
 # 你的GitHub帳號/剛剛clone至電腦的專案名稱 以我自己為例，我的 repository 欄位要填入
