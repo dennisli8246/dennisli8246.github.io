@@ -17,7 +17,7 @@ remote_theme: "mmistakes/minimal-mistakes@4.18.1"
 # repository 則須按照自己的 GitHub 做改變，其格式為
 # 你的GitHub帳號/剛剛clone至電腦的專案名稱 以我自己為例，我的 repository 欄位要填入
 repository: dennisli8246/dennisli8246.github.io
-minimal_mistakes_skin: # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: # "dark", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "zh-TW"  # 自己的地區
