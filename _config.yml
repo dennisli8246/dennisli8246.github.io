@@ -21,7 +21,7 @@ minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "zh-TW"  # 自己的地區
-title                    : "DD-notebook Blog"  # 網站的名稱
+title                    : "DDnotebook Blog"  # 網站的名稱
 title_separator          : "-"
 subtitle                 : "丹丹筆記" # 子標題，位於網站名稱下方
 name                     : "DennisLi"
