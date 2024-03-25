@@ -313,7 +313,7 @@ defaults:
     values:
       layout: single
       read_time: true
-      author_profile: true
+      sidebar_profile: true
       share: true
       comments: true
       sidebar:
