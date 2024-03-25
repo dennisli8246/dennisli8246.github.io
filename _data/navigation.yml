@@ -14,16 +14,4 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
-docs:
-  - title: ROS
-    children:
-      - title: "Install ROS"
-        url: /docs/quick-start-guide/
-      - title: "Robot Arm"
-        url: /docs/structure/
 
-  - title: Machine Learning
-    children:
-      - title: "Configuration"
-        url: /docs/configuration/
-      - title: "Navigation"
