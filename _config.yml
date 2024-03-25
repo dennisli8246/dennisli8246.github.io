@@ -29,7 +29,6 @@ description              : "This website is to note everything I done in the wor
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "dennisli8246/dennisli8246.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -107,14 +106,12 @@ analytics:
     tracking_id          :
     anonymize_ip         : # true, false (default)
 
-
 # Site Author
 author:
   name             : "Dennis"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Life is full of challenges."
   location         : "Taiwan"
-  
   email            :
   links:
     - label: "Email"
