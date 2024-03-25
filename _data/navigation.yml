@@ -7,7 +7,7 @@ main:
   - title: "About"
     url: /about/
   - title: "Collection"
-    url: /collection-archive/
+    url: /collection/
   - title: "categories"
     url: /categories/
 
