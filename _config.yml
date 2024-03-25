@@ -303,16 +303,5 @@ defaults:
       comments: true
       share: true
       related: true
-  # _docs
-  - scope:
-      path: ""
-      type: docs
-    values:
-      layout: single
-      read_time: true
-      sidebar_profile: true
-      share: true
-      comments: true
-      sidebar:
-        nav: "docs"
+
       
