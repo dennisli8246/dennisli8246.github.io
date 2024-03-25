@@ -293,6 +293,7 @@ defaults:
     values:
       sidebar:
         nav: "docs"
+        
   # _posts
   - scope:
       path: ""
