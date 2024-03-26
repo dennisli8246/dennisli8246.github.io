@@ -111,7 +111,7 @@ analytics:
 # Site Author
 author:
   name             : "Dennis"
-  avatar           : #"assets/images/image1.png"
+  avatar           : "assets/images/head.png"
   bio              : "Life is full of challenges."
   location         : "Taiwan"
   email            :
