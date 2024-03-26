@@ -20,6 +20,8 @@ repository: dennisli8246/dennisli8246.github.io
 minimal_mistakes_skin: # "dark", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
+header:
+  image: /assets/images/image1.png
 locale                   : "zh-TW"  # 自己的地區
 title                    : "DDnotebook Blog"  # 網站的名稱
 title_separator          : "-"
