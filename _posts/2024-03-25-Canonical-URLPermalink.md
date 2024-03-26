@@ -1,7 +1,7 @@
 ---
 layout: single
 header:
-  image: /assets/images/image1.png
+  image: /assets/images/header1.png
 classes:
   - landing
   - dark-theme
