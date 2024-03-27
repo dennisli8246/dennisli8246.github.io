@@ -7,7 +7,7 @@ main:
   - title: "Collection"
     url: /collection/
   - title: "Knowledge Base"
-    url: /collection-archive/
+    url: /docs/knowledge_base/
   - title: "categories"
     url: /categories/
 
