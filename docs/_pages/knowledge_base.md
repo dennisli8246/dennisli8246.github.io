@@ -8,5 +8,6 @@ header:
   caption: "Photo credit: [**Dennis**](https://github.com/dennisli8246/dennisli8246.github.io/blob/master/assets/images/header1.png)"
 sidebar:
   nav: "docs"
+collection: docs
 
 ---
