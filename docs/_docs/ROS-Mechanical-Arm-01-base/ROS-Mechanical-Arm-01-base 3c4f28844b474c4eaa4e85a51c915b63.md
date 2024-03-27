@@ -1,3 +1,23 @@
+---
+title: "ROS-Mechanical-Arm-01-base"
+layout: single
+permalink: /docs/ros/
+excerpt: "How to build a mechanical arm."
+last_modified_at: 2024-03-27T08:48:05-04:00
+categories:
+  - ROS
+  - ROS建制機械機械手臂
+tags:
+  - ROS
+  - 機械手臂
+  - mechanical arm
+  - Gazebo
+redirect_from:
+  - /theme-setup/
+toc: true
+sidebar:
+  nav: "docs"
+---
 # ROS-Mechanical-Arm-01-base
 
 本篇將使用ROS系統建立一個機械手臂的移動基座，並且使用模擬軟體Gazebo觀察所建立的模型。會需要一點ROS的基本知識。本專案參考《機器人作業系統與專案實作》這本書。這本書有些步驟設定上有些錯誤，這一系列會修正。
