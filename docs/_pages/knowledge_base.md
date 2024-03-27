@@ -9,5 +9,5 @@ header:
 sidebar:
   nav: "docs"
 collection: docs
-
+classes: wide
 ---
