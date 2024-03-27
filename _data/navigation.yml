@@ -5,7 +5,7 @@ main:
   - title: "About"
     url: /about/
   - title: "Collection"
-    url: /collection-archive/
+    url: /collection/
   - title: "Knowledge Base"
     url: /collection-archive/
   - title: "categories"
