@@ -1,6 +1,6 @@
 ---
 layout: collection
-permalink: /docs/knowledge_base/
+permalink: /knowledge_base/
 excerpt: "This post is a place to note something"
 header:
   overlay_image: /assets/images/header1.png
