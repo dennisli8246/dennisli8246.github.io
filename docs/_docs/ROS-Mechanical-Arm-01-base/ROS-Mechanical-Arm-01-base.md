@@ -1,6 +1,6 @@
 ---
 title: "ROS建制機械手臂-01（基座）"
-layout: single
+layout: collection
 permalink: /docs/ros/
 excerpt: "How to build a mechanical arm."
 last_modified_at: 2024-03-27T08:48:05-04:00
