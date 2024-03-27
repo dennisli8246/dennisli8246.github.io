@@ -284,7 +284,12 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-
+    
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
 
 defaults:
   # _posts
