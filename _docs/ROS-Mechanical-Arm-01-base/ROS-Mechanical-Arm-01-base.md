@@ -4,6 +4,7 @@ layout: collection
 permalink: /docs/ros/
 excerpt: "How to build a mechanical arm."
 last_modified_at: 2024-03-27T08:48:05-04:00
+classes: wide
 categories:
   - ROS
   - ROS建制機械機械手臂
