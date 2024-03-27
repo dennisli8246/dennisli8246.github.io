@@ -25,7 +25,7 @@ sidebar:
 
 本篇將使用ROS系統建立一個機械手臂的移動基座，並且使用模擬軟體Gazebo觀察所建立的模型。會需要一點ROS的基本知識。本專案參考《機器人作業系統與專案實作》這本書。這本書有些步驟設定上有些錯誤，這一系列會修正。
 
-![Untitled](ROS-Mechanical-Arm-01-base/Untitled.png)
+![Untitled](/ROS-Mechanical-Arm-01-base/Untitled.png)
 
 1. ros_control和ros_controller套件
     1. [http://wiki.ros.org/ros_control](http://wiki.ros.org/ros_control)
