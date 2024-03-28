@@ -1,5 +1,5 @@
 ---
-title: "ROS建制機械手臂（手臂模型）"
+title: "ROS建制機械手臂-3（手臂模型）"
 layout: collection
 permalink: /ROS-Mechanical-Arm-03-model/
 excerpt: "How to build a mechanical arm."
