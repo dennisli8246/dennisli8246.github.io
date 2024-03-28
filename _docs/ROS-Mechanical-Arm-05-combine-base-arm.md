@@ -1,3 +1,23 @@
+---
+title: "ROS建制機械手臂-5（組合base＆arm）"
+layout: collection
+permalink: /ROS-Mechanical-Arm-05-combine-base-arm/
+excerpt: "How to build a mechanical arm."
+last_modified_at: 2024-03-28T18:14:05-04:00
+classes: wide
+categories:
+  - ROS
+  - ROS建制機械機械手臂
+tags:
+  - ROS
+  - 機械手臂
+  - mechanical arm
+  - Gazebo
+redirect_from:
+  - /theme-setup/
+sidebar:
+  nav: "docs"
+---
 # ROS-Mechanical-Arm-05-combine-base-arm
 
 #ROS建制機械手臂（組合base＆arm）
