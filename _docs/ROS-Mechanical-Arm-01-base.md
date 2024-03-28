@@ -15,7 +15,6 @@ tags:
   - Gazebo
 redirect_from:
   - /theme-setup/
-toc: true
 sidebar:
   nav: "docs"
 ---
