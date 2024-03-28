@@ -289,7 +289,7 @@ compress_html:
 collections:
   docs:
     output: true
-    permalink: /docs/:collection/:path/
+    permalink: /:collection/:path/
 
 defaults:
   # _posts
