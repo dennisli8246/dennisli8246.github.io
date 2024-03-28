@@ -17,6 +17,8 @@ docs:
     children:
       - title: "ROS-Mechanical-Arm-01-base"
         url: /ROS-Mechanical-Arm-01-base/
+      - title: "ROS-Mechanical-Arm-02-collision-actuator"
+        url:/ROS-Mechanical-Arm-02-collision-actuator/
   - title: Customization
     children:
       - title: "Configuration"
