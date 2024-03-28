@@ -1,6 +1,6 @@
 ---
 title: "ROS建制機械手臂-02（定義碰撞與制動）"
-layout: collection
+layout: single
 permalink: /ROS-Mechanical-Arm-02-collision-actuator/
 excerpt: "How to build a mechanical arm."
 last_modified_at: 2024-03-28T17:10:05-04:00
@@ -288,7 +288,7 @@ sidebar:
         roslaunch robot_description base_gazebo_control_xacro.lunch
         ```
         
-        ![Untitled](ROS-Mechanical-Arm-02-collision-actuator%20937e8636d4f44ac7937ff956ab533f76/Untitled.png)
+        ![Untitled](/assets/ROS-Mechanical-Arm-02-collision-actuator/Untitled.png)
         
     3. 在另外一個terminal查看topic
         
