@@ -10,6 +10,5 @@ header:
 sidebar:
   nav: "docs"
 collection: docs
-entries_layout: grid
 classes: wide
 ---
