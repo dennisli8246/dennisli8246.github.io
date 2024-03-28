@@ -4,8 +4,6 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Collection"
-    url: /ROS-Mechanical-Arm-01-base/
   - title: "Knowledge Base"
     url: /knowledge_base/
   - title: "categories"
