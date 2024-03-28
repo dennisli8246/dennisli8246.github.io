@@ -1,4 +1,5 @@
 ---
+title: Knowledge Base
 layout: collection
 permalink: /knowledge_base/
 excerpt: "This post is a place to note something"
@@ -9,5 +10,6 @@ header:
 sidebar:
   nav: "docs"
 collection: docs
+entries_layout: grid
 classes: wide
 ---
