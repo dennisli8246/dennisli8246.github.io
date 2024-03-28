@@ -288,7 +288,7 @@ sidebar:
         roslaunch robot_description base_gazebo_control_xacro.lunch
         ```
         
-        ![Untitled](/assets/ROS-Mechanical-Arm-02-collision-actuator/Untitled.png)
+        ![Untitled](/assets/images/ROS-Mechanical-Arm-02-collision-actuator/Untitled.png)
         
     3. 在另外一個terminal查看topic
         
@@ -297,7 +297,7 @@ sidebar:
         rostopic list
         ```
         
-        ![Untitled](ROS-Mechanical-Arm-02-collision-actuator%20937e8636d4f44ac7937ff956ab533f76/Untitled%201.png)
+        ![Untitled](/assets/images/ROS-Mechanical-Arm-02-collision-actuator/Untitled01.png)
         
 
 <aside>
@@ -319,13 +319,13 @@ sidebar:
     
 3. 錯誤原因為visual所以查看<virual>標籤下是否有問題,例如<virual>中是否有其他標籤造成衝突
 
-![Untitled](ROS-Mechanical-Arm-02-collision-actuator%20937e8636d4f44ac7937ff956ab533f76/Untitled%202.png)
+![Untitled](/assets/images/ROS-Mechanical-Arm-02-collision-actuator/Untitled02.png)
 
 </aside>
 
 修正後結果如下
 
-![Untitled](ROS-Mechanical-Arm-02-collision-actuator%20937e8636d4f44ac7937ff956ab533f76/Untitled%203.png)
+![Untitled](/assets/images/ROS-Mechanical-Arm-02-collision-actuator/Untitled03.png)
 
 1. 啟動rqt_robot_steering讓機器人移動測試
 
@@ -338,8 +338,8 @@ rosrun rqt_robot_steering rqt_robot_steering
 
 </aside>
 
-![Untitled](ROS-Mechanical-Arm-02-collision-actuator%20937e8636d4f44ac7937ff956ab533f76/Untitled%204.png)
+![Untitled](/assets/images/ROS-Mechanical-Arm-02-collision-actuator/Untitled04.png)
 
 控制結果如下
 
-[Screencast from 2024年三月01日 14時20分23秒.webm](ROS-Mechanical-Arm-02-collision-actuator%20937e8636d4f44ac7937ff956ab533f76/Screencast_from_2024%25E5%25B9%25B4%25E4%25B8%2589%25E6%259C%258801%25E6%2597%25A5_14%25E6%2599%258220%25E5%2588%258623%25E7%25A7%2592.webm)
+[Screencast from 2024年三月01日 14時20分23秒.webm](/assets/images/ROS-Mechanical-Arm-02-collision-actuator/Screencast.webm)
