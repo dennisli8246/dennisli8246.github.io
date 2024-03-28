@@ -1,6 +1,28 @@
+---
+title: "ROS建制機械手臂-02（定義碰撞與制動）"
+layout: collection
+permalink: /ROS-Mechanical-Arm-02-collision-actuator/
+excerpt: "How to build a mechanical arm."
+last_modified_at: 2024-03-28T17:10:05-04:00
+classes: wide
+categories:
+  - ROS
+  - ROS建制機械機械手臂
+tags:
+  - ROS
+  - 機械手臂
+  - mechanical arm
+  - Gazebo
+redirect_from:
+  - /theme-setup/
+toc: true
+sidebar:
+  nav: "docs"
+---
+
 # ROS-Mechanical-Arm-02-collision-actuator
 
-＃ROS建制機械手臂（定義碰撞與制動）
+＃ROS建制機械手臂-02（定義碰撞與制動）
 
 延續ROS建制機械手臂（基座）[https://www.notion.so/ROS-3c4f28844b474c4eaa4e85a51c915b63](https://www.notion.so/ROS-Mechanical-Arm-01-base-3c4f28844b474c4eaa4e85a51c915b63?pvs=21)
 
