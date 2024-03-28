@@ -1,3 +1,23 @@
+---
+title: "ROS建制機械手臂-4（手臂模擬與制動）"
+layout: collection
+permalink: /ROS-Mechanical-Arm-04-arm-actuator/
+excerpt: "How to build a mechanical arm."
+last_modified_at: 2024-03-28T18:14:05-04:00
+classes: wide
+categories:
+  - ROS
+  - ROS建制機械機械手臂
+tags:
+  - ROS
+  - 機械手臂
+  - mechanical arm
+  - Gazebo
+redirect_from:
+  - /theme-setup/
+sidebar:
+  nav: "docs"
+---
 # ROS-Mechanical-Arm-04-arm-actuator
 
 #ROS建制機械手臂（手臂模擬與制動）
