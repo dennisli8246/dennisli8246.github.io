@@ -74,7 +74,7 @@ sidebar:
     mkdir config launch meshes urdf
     ```
     
-    ![Untitled](assets/images/ROS-Mechanical-Arm-01-base/Untitled01.png)
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-01-base/Untitled01.png)
     
 5. 在~/chapter3_ws/src/robot_description/urdf下建立robot_base.urdf.xacro
     
@@ -110,7 +110,7 @@ sidebar:
 7. 另外建立一個檔案robot_essentials.xacro
     1. <xacro:include filename="$(find robot_description)/urdf/robot_base_essentials.xacro" />這行會將robot_base.urdf.xacro連接到這個檔案中robot_essentials.xacro
         
-        ![Untitled](assets/images/ROS-Mechanical-Arm-01-base/Untitled02.png)
+        ![Untitled](/assets/images/ROS-Mechanical-Arm-01-base/Untitled02.png)
         
     
     ```python
@@ -183,7 +183,7 @@ sidebar:
     roslaunch urdf_tutorial display.launch model:=robot_base.urdf.xacro
     ```
     
-    ![Untitled](assets/images/ROS-Mechanical-Arm-01-base/Untitled03.png)
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-01-base/Untitled03.png)
     
     結果發現看不到模型,需要下載模型
     
@@ -191,9 +191,9 @@ sidebar:
     
     將檔案放在/chapter3_ws/src/robot_description/meshes的資料夾下
     
-    ![Untitled](assets/images/ROS-Mechanical-Arm-01-base/Untitled04.png)
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-01-base/Untitled04.png)
     
-    ![Untitled](assets/images/ROS-Mechanical-Arm-01-base/Untitled05.png)
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-01-base/Untitled05.png)
     
 12. Reference code:
     
