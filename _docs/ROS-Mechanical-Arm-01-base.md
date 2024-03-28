@@ -1,7 +1,7 @@
 ---
 title: "ROS建制機械手臂-01（基座）"
 layout: collection
-permalink: /docs/ROS-Mechanical-Arm-01-base/
+permalink: /ROS-Mechanical-Arm-01-base/
 excerpt: "How to build a mechanical arm."
 last_modified_at: 2024-03-27T08:48:05-04:00
 classes: wide
@@ -25,7 +25,7 @@ sidebar:
 
 本篇將使用ROS系統建立一個機械手臂的移動基座，並且使用模擬軟體Gazebo觀察所建立的模型。會需要一點ROS的基本知識。本專案參考《機器人作業系統與專案實作》這本書。這本書有些步驟設定上有些錯誤，這一系列會修正。
 
-![Untitled](ROS-Mechanical-Arm-01-base/Untitled.png)
+![Untitled](assets/images/ROS-Mechanical-Arm-01-base/Untitled.png)
 
 1. ros_control和ros_controller套件
     1. [http://wiki.ros.org/ros_control](http://wiki.ros.org/ros_control)
@@ -74,7 +74,7 @@ sidebar:
     mkdir config launch meshes urdf
     ```
     
-    ![Untitled](ROS-Mechanical-Arm-01-base/Untitled01.png)
+    ![Untitled](assets/images/ROS-Mechanical-Arm-01-base/Untitled01.png)
     
 5. 在~/chapter3_ws/src/robot_description/urdf下建立robot_base.urdf.xacro
     
@@ -110,7 +110,7 @@ sidebar:
 7. 另外建立一個檔案robot_essentials.xacro
     1. <xacro:include filename="$(find robot_description)/urdf/robot_base_essentials.xacro" />這行會將robot_base.urdf.xacro連接到這個檔案中robot_essentials.xacro
         
-        ![Untitled](ROS-Mechanical-Arm-01-base/Untitled02.png)
+        ![Untitled](assets/images/ROS-Mechanical-Arm-01-base/Untitled02.png)
         
     
     ```python
@@ -183,7 +183,7 @@ sidebar:
     roslaunch urdf_tutorial display.launch model:=robot_base.urdf.xacro
     ```
     
-    ![Untitled](ROS-Mechanical-Arm-01-base/Untitled03.png)
+    ![Untitled](assets/images/ROS-Mechanical-Arm-01-base/Untitled03.png)
     
     結果發現看不到模型,需要下載模型
     
@@ -191,9 +191,9 @@ sidebar:
     
     將檔案放在/chapter3_ws/src/robot_description/meshes的資料夾下
     
-    ![Untitled](ROS-Mechanical-Arm-01-base/Untitled04.png)
+    ![Untitled](assets/images/ROS-Mechanical-Arm-01-base/Untitled04.png)
     
-    ![Untitled](ROS-Mechanical-Arm-01-base/Untitled05.png)
+    ![Untitled](assets/images/ROS-Mechanical-Arm-01-base/Untitled05.png)
     
 12. Reference code:
     
