@@ -15,7 +15,6 @@ tags:
   - Gazebo
 redirect_from:
   - /theme-setup/
-toc: true
 sidebar:
   nav: "docs"
 ---
@@ -299,8 +298,6 @@ sidebar:
         
         ![Untitled](/assets/images/ROS-Mechanical-Arm-02-collision-actuator/Untitled01.png)
         
-
-<aside>
 💡 使用rviz視覺化查看視覺話錯誤問題
 
 1. 新開的terminal使用rviz視覺化
@@ -321,8 +318,6 @@ sidebar:
 
 ![Untitled](/assets/images/ROS-Mechanical-Arm-02-collision-actuator/Untitled02.png)
 
-</aside>
-
 修正後結果如下
 
 ![Untitled](/assets/images/ROS-Mechanical-Arm-02-collision-actuator/Untitled03.png)
@@ -333,10 +328,8 @@ sidebar:
 rosrun rqt_robot_steering rqt_robot_steering
 ```
 
-<aside>
 💡 rqt_robot_steering無法控制,要確認一下rqt_robot_steering中所控制的topic是否正確,應該要是/robot_base_controller/cmd_vel
 
-</aside>
 
 ![Untitled](/assets/images/ROS-Mechanical-Arm-02-collision-actuator/Untitled04.png)
 
