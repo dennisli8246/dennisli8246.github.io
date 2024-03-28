@@ -1,7 +1,7 @@
 ---
 title: "ROS建制機械手臂-01（基座）"
 layout: collection
-permalink: /ROS-Mechanical-Arm-01-base/
+permalink: /docs/ROS-Mechanical-Arm-01-base/
 excerpt: "How to build a mechanical arm."
 last_modified_at: 2024-03-27T08:48:05-04:00
 classes: wide
