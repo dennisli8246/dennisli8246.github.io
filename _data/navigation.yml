@@ -21,7 +21,7 @@ docs:
         url: /ROS-Mechanical-Arm-03-model/
       - title: "ROS-Mechanical-Arm-04-arm-actuator"
         url: /ROS-Mechanical-Arm-04-arm-actuator/
-      - title: "ROS-Mechanical-Arm-05-combine-base-armROS-Mechanical-Arm-03-model"
+      - title: "ROS-Mechanical-Arm-05-combine-base-arm"
         url:  /ROS-Mechanical-Arm-05-combine-base-arm/
      
   - title: ROS-Navigation
