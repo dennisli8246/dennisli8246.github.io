@@ -6,7 +6,7 @@ main:
     url: /about/
   - title: "Knowledge Base"
     url: /knowledge_base/
-  - title: "categories"
+  - title: "Blog"
     url: /categories/
 
 # documentation links
