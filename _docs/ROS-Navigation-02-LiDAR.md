@@ -1,3 +1,25 @@
+---
+title: "ROS建立導航系統（LiDAR）"
+layout: collection
+permalink: /ROS-Navigation-02-LiDAR/
+excerpt: "How to build a mechanical arm."
+last_modified_at: 2024-03-29T13:19:00-00:00
+classes: wide
+categories:
+  - ROS
+  - ROS建制機械機械手臂
+  - Navigation
+tags:
+  - ROS
+  - 機械手臂
+  - mechanical arm
+  - Gazebo
+  - Navigation
+redirect_from:
+  - /theme-setup/
+sidebar:
+  nav: "docs"
+---
 # ROS-Navigation-02-LiDAR
 
 ## ＃ROS建立導航系統（LiDAR）
