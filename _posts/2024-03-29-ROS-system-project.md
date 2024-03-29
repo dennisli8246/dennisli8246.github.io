@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: single
 comments: true
 author_profile: true
 excerpt: "This is a project with ROS system"
