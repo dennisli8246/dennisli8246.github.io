@@ -6,7 +6,7 @@ C 語言為 Dennis Ritchie 所設計的程式語言並且與 Ken Thompson 一起
 
 以第一篇文章來介紹一個這個語言，象徵所有的事情都由這個簡單的開始。不......應該是說，當你可以printf這段文字的時候應該是做出多少努力且只是剛開始而已。
 
-![Brian W. Kernighan](2023-10-20-hello%20world%20md%2067cccb19615842bb8a5e90c8de8855cb/Untitled.png)
+![Brian W. Kernighan](/assets/images/2023-10-20-hello%20world%20md%2067cccb19615842bb8a5e90c8de8855cb/Untitled.png)
 
 Brian W. Kernighan
 
