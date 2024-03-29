@@ -1,5 +1,5 @@
 ---
-title: "ROS建制機械手臂-02（定義碰撞與制動）"
+title: "ROS建立導航系統（環境建立）"
 layout: collection
 permalink: /ROS-Navigation-01-environment/
 excerpt: "How to build a mechanical arm."
@@ -8,11 +8,13 @@ classes: wide
 categories:
   - ROS
   - ROS建制機械機械手臂
+  - Navigation
 tags:
   - ROS
   - 機械手臂
   - mechanical arm
   - Gazebo
+  - Navigation
 redirect_from:
   - /theme-setup/
 sidebar:
