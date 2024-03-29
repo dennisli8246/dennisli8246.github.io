@@ -11,7 +11,7 @@ classes:
   - dark-theme
 title:  "RHolle World"
 date:   2023-10-20 14:00:00 +0800
-categories: ROS
+categories: C
 ---
 
 # 2023-10-20-hello world.md
