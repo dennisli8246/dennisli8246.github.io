@@ -1,3 +1,19 @@
+---
+layout: single
+comments: true
+author_profile: true
+excerpt: "Holle World"
+header:
+	overlay_image: assets/images/2023-10-20-hello%20world%20md%2067cccb19615842bb8a5e90c8de8855cb/Untitled.png
+  teaser: assets/images/2023-10-20-hello%20world%20md%2067cccb19615842bb8a5e90c8de8855cb/Untitled.png
+classes:
+  - landing
+  - dark-theme
+title:  "ROS system project"
+date:   2023-10-20 14:00:00 +0800
+categories: ROS
+---
+
 # 2023-10-20-hello world.md
 
 > *"HELLO WORLD"
