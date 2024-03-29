@@ -94,7 +94,7 @@ sidebar:
     
 2. 設定導航堆疊的控制器（YAML檔）,來建立move_base節點可以參考[http://wiki.ros.org/move_base](http://wiki.ros.org/move_base)
     
-    ![Untitled](ROS-Navigation-02-LiDAR%20ffd4e84fec7c4245b2396db6b5f9be06/Untitled.png)
+    ![Untitled](/assets/images/ROS-Navigation-02-LiDAR%20ffd4e84fec7c4245b2396db6b5f9be06/Untitled.png)
     
 3. 建立move_base的服務器以下四個檔案在/chapter5_ws/src/robot_description/config資料夾中
     1. **base_local_planner_params.yaml**
@@ -149,7 +149,7 @@ sidebar:
     sudo apt-get install ros-noetic-slam-gmapping
     ```
     
-    ![Untitled](ROS-Navigation-02-LiDAR%20ffd4e84fec7c4245b2396db6b5f9be06/Untitled%201.png)
+    ![Untitled](/assets/images/ROS-Navigation-02-LiDAR%20ffd4e84fec7c4245b2396db6b5f9be06/Untitled%201.png)
     
 5. 定義機器人基座
     1. 使用ROS的自主導航套件amcl[https://wiki.ros.org/amcl](https://wiki.ros.org/amcl)
