@@ -1,4 +1,20 @@
-# 2023-11-30-INTRODUCTION-to-KALMAN FILTER.md
+---
+layout: single
+comments: true
+author_profile: true
+excerpt: "INTRODUCTION-to-KALMAN-FILTER"
+header:
+  overlay_image: https://ddnotbook.files.wordpress.com/2023/11/image-7.png?w=1024
+  teaser: https://ddnotbook.files.wordpress.com/2023/11/image-7.png?w=1024
+classes:
+  - landing
+  - dark-theme
+title:  "INTRODUCTION-to-KALMAN-FILTER"
+date:   2023-10-20 14:00:00 +0800
+categories: ROS
+---
+
+# 2023-11-30-INTRODUCTION-to-KALMAN-FILTER.md
 
 ## 卡爾曼濾波器
 
