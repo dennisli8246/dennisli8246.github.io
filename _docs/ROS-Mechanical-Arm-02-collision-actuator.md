@@ -338,4 +338,4 @@ rqt_robot_steering無法控制,要確認一下rqt_robot_steering中所控制的t
 
 控制結果如下：
 
-[Screencast from 2024年三月01日 14時20分23秒.webm](ROS-Mechanical-Arm-02-collision-actuator%20937e8636d4f44ac7937ff956ab533f76/Screencast_from_2024%25E5%25B9%25B4%25E4%25B8%2589%25E6%259C%258801%25E6%2597%25A5_14%25E6%2599%258220%25E5%2588%258623%25E7%25A7%2592.webm)
+[Screencast from 2024年三月01日 14時20分23秒.webm](/assets/images/ROS-Mechanical-Arm-02-collision-actuator%20937e8636d4f44ac7937ff956ab533f76/Screencast_from_2024%25E5%25B9%25B4%25E4%25B8%2589%25E6%259C%258801%25E6%2597%25A5_14%25E6%2599%258220%25E5%2588%258623%25E7%25A7%2592.webm)
