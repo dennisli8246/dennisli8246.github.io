@@ -23,34 +23,34 @@ sidebar:
 #ROS建制機械手臂（手臂模擬與制動）
 
 1. 在robot_arm.urdf.xacro各個<link>標籤中建立質量與碰撞,以下程式碼為單一link舉例
-
-```python
-      <origin
-        xyz="0.0030946 4.78250032638821E-11 0.053305"
-        rpy="0 0 0" />
-      <mass
-        value="47.873" />
-      <inertia
-        ixx="0.774276574699151"
-        ixy="-1.03781944357671E-10"
-        ixz="0.00763014265820928"
-        iyy="1.64933255189991"
-        iyz="1.09578155845563E-12"
-        izz="2.1239326987473" />
-    </inertial>
-
----------------------
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="1.5707963267949 0 3.14" />
-      <geometry>
-        <mesh filename="package://robot_description/meshes/robot_base.stl" />
-      </geometry>
-    </collision>
-```
-
-1. 在robot_arm_essentials.xacro定義制動器
+    
+    ```python
+          <origin
+            xyz="0.0030946 4.78250032638821E-11 0.053305"
+            rpy="0 0 0" />
+          <mass
+            value="47.873" />
+          <inertia
+            ixx="0.774276574699151"
+            ixy="-1.03781944357671E-10"
+            ixz="0.00763014265820928"
+            iyy="1.64933255189991"
+            iyz="1.09578155845563E-12"
+            izz="2.1239326987473" />
+        </inertial>
+    
+    ---------------------
+        <collision>
+          <origin
+            xyz="0 0 0"
+            rpy="1.5707963267949 0 3.14" />
+          <geometry>
+            <mesh filename="package://robot_description/meshes/robot_base.stl" />
+          </geometry>
+        </collision>
+    ```
+    
+2. 在robot_arm_essentials.xacro定義制動器
     
     ```python
     <!--######################################################################-->
@@ -72,70 +72,70 @@ sidebar:
     <!--######################################################################-->
     ```
     
-2. 在robot_arm.urdf.xacro呼叫制動器
-
-```python
-<xacro:arm_transmission prefix="arm_base"/>
-<xacro:arm_transmission prefix="shoulder"/>
-<xacro:arm_transmission prefix="bottom_wrist"/>
-<xacro:arm_transmission prefix="elbow"/>
-<xacro:arm_transmission prefix="top_wrist"/>
-```
-
-1. 定義ROS_CONTROLLER: 在gazebo_essentials_base.xacro加入一個joint_state_publisher控制器檔
-
-```python
-  <gazebo>
-    <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
-      <jointName>arm_base_joint, shoulder_joint, bottom_wrist_joint, elbow_joint, bottom_wrist_joint</jointName>
-    </plugin>
-  </gazebo>
-```
-
-1. robot_arm.urdf.xacro中引入巨集標籤
-
-```python
-<xacro:include filename="$(find robot_description)/urdf/robot_arm_essentials.xacro" />
-<xacro:include filename="$(find robot_description)/urdf/gazebo_essentials_base.xacro" />
-```
-
-1. 建立機械手臂控制器: 在~/chapter3_ws/src/robot_description/config下建立arm_control.yaml
-
-```python
-arm_controller:
-    type: position_controllers/JointTrajectoryController
-    joints:
-       - arm_base_joint
-       - shoulder_joint
-       - bottom_wrist_joint
-       - elbow_joint
-       - top_wrist_joint
-    constraints:
-      goal_time: 0.6
-      stopped_velocity_tolerance: 0.05
-      hip: {trajectory: 0.1, goal: 0.1}
-      shoulder: {trajectory: 0.1, goal: 0.1}
-      elbow: {trajectory: 0.1, goal: 0.1}
-      wrist: {trajectory: 0.1, goal: 0.1}
-    stop_trajectory_duration: 0.5
-    state_publish_rate:  25
-    action_monitor_rate: 10
-# Publish all joint states -----------------------------------
-joint_state_controller:
-    type: joint_state_controller/JointStateController
-    publish_rate: 50
-
-/gazebo_ros_control:
-    pid_gains:
-      arm_base_joint: {p: 1000.0, i: 100.0, d: 10.0}
-      shoulder_joint: {p: 1000.0, i: 100.0, d: 10.0}
-      bottom_wrist_joint: {p: 1000.0, i: 100.0, d: 10.0}
-      elbow_joint: {p: 1000.0, i: 100.0, d: 10.0}
-      top_wrist_joint: {p: 100.0, i: 0.0, d: 0.0}
-
-```
-
-1. 在/chapter3_ws/src/robot_description/config建立joint_state_controller.yaml
+3. 在robot_arm.urdf.xacro呼叫制動器
+    
+    ```python
+    <xacro:arm_transmission prefix="arm_base"/>
+    <xacro:arm_transmission prefix="shoulder"/>
+    <xacro:arm_transmission prefix="bottom_wrist"/>
+    <xacro:arm_transmission prefix="elbow"/>
+    <xacro:arm_transmission prefix="top_wrist"/>
+    ```
+    
+4. 定義ROS_CONTROLLER: 在gazebo_essentials_base.xacro加入一個joint_state_publisher控制器檔
+    
+    ```python
+      <gazebo>
+        <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+          <jointName>arm_base_joint, shoulder_joint, bottom_wrist_joint, elbow_joint, bottom_wrist_joint</jointName>
+        </plugin>
+      </gazebo>
+    ```
+    
+5. robot_arm.urdf.xacro中引入巨集標籤
+    
+    ```python
+    <xacro:include filename="$(find robot_description)/urdf/robot_arm_essentials.xacro" />
+    <xacro:include filename="$(find robot_description)/urdf/gazebo_essentials_base.xacro" />
+    ```
+    
+6. 建立機械手臂控制器: 在~/chapter3_ws/src/robot_description/config下建立arm_control.yaml
+    
+    ```python
+    arm_controller:
+        type: position_controllers/JointTrajectoryController
+        joints:
+           - arm_base_joint
+           - shoulder_joint
+           - bottom_wrist_joint
+           - elbow_joint
+           - top_wrist_joint
+        constraints:
+          goal_time: 0.6
+          stopped_velocity_tolerance: 0.05
+          hip: {trajectory: 0.1, goal: 0.1}
+          shoulder: {trajectory: 0.1, goal: 0.1}
+          elbow: {trajectory: 0.1, goal: 0.1}
+          wrist: {trajectory: 0.1, goal: 0.1}
+        stop_trajectory_duration: 0.5
+        state_publish_rate:  25
+        action_monitor_rate: 10
+    # Publish all joint states -----------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+    
+    /gazebo_ros_control:
+        pid_gains:
+          arm_base_joint: {p: 1000.0, i: 100.0, d: 10.0}
+          shoulder_joint: {p: 1000.0, i: 100.0, d: 10.0}
+          bottom_wrist_joint: {p: 1000.0, i: 100.0, d: 10.0}
+          elbow_joint: {p: 1000.0, i: 100.0, d: 10.0}
+          top_wrist_joint: {p: 100.0, i: 0.0, d: 0.0}
+    
+    ```
+    
+7. 在/chapter3_ws/src/robot_description/config建立joint_state_controller.yaml
     
     ```python
       # Publish all joint states -----------------------------------
@@ -145,47 +145,47 @@ joint_state_controller:
     
     ```
     
-2. 測試機械手臂： 在~/chapter3_ws/src/robot_description/launch建立啟動檔**arm_gazebo_control_xacro.launch**
+8. 測試機械手臂： 在~/chapter3_ws/src/robot_description/launch建立啟動檔**arm_gazebo_control_xacro.launch**
+    
+    ```python
+    <?xml version="1.0"?>
+    <launch>
+    
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find robot_description)/urdf/robot_arm.urdf.xacro" />
+      <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+      <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model robot_arm" />
+      <rosparam command="load" file="$(find robot_description)/config/arm_control.yaml" />
+      <node name="arm_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn arm_controller" respawn="false" output="screen"/>
+      <rosparam command="load" file="$(find robot_description)/config/joint_state_controller.yaml" />
+      <node name="joint_state_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn joint_state_controller" respawn="false" output="screen"/>
+      <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
+      
+    </launch>
+    ```
+    
 
-```python
-<?xml version="1.0"?>
-<launch>
+💡注意：
 
-<param name="robot_description" command="$(find xacro)/xacro --inorder $(find robot_description)/urdf/robot_arm.urdf.xacro" />
-  <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
-  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model robot_arm" />
-  <rosparam command="load" file="$(find robot_description)/config/arm_control.yaml" />
-  <node name="arm_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn arm_controller" respawn="false" output="screen"/>
-  <rosparam command="load" file="$(find robot_description)/config/joint_state_controller.yaml" />
-  <node name="joint_state_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn joint_state_controller" respawn="false" output="screen"/>
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
-  
-</launch>
-```
-
-<aside>
-💡 **arm_control.yaml**檔案中的controller會被**arm_gazebo_control_xacro.launch的標籤尋找例如**<node name="arm_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn arm_controller" respawn="false" output="screen"/> 中的arm_controller就會去尋找**arm_control.yaml中的**arm_controller
-
-</aside>
+**arm_control.yaml**檔案中的controller會被**arm_gazebo_control_xacro.launch的標籤尋找例如**<node name="arm_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn arm_controller" respawn="false" output="screen"/> 中的arm_controller就會去尋找**arm_control.yaml中的**arm_controller
 
 1. 執行視覺化: 在~/chapter3_ws/
-
-```python
-initros1
-source devel/setup.bash
-roslaunch robot_description arm_gazebo_control_xacro.launch
-```
-
-![Untitled](/assets/images/ROS-Mechanical-Arm-04-arm-actuator/Untitled.png)
-
-1. 查看topic
+    
+    ```python
+    initros1
+    source devel/setup.bash
+    roslaunch robot_description arm_gazebo_control_xacro.launch
+    ```
+    
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-04-arm-actuator%20cfa94275ccdb479ca8eb3ab829507e7a/Untitled.png)
+    
+2. 查看topic
     
     ```python
     initros1
     rostopic list
     ```
     
-2. 輸入指令移動機械手臂
+3. 輸入指令移動機械手臂
     
     ```python
     rostopic pub /arm_controller/command trajectory_msgs/JointTrajectory '{joint_names: ["arm_base_joint","shoulder_joint", "bottom_wrist_joint", "elbow_joint","top_wrist_joint"], points: [{positions: [-0.1, 0.5, 0.02, 0, 0], time_from_start: [1,0]}]}' -1
@@ -195,19 +195,18 @@ roslaunch robot_description arm_gazebo_control_xacro.launch
     rostopic pub /arm_controller/command trajectory_msgs/JointTrajectory '{joint_names: ["arm_base_joint","shoulder_joint", "bottom_wrist_joint", "elbow_joint","top_wrist_joint"], points: [{positions: [0, 0, 0, 0, 0], time_from_start: [1,0]}]}' -1
     ```
     
-    [Screencast from 2024年三月07日 15時06分52秒.webm](/assets/images/ROS-Mechanical-Arm-04-arm-actuator/Screencast_from_2024.webm)
+    [Screencast from 2024年三月07日 15時06分52秒.webm](/assets/images/ROS-Mechanical-Arm-04-arm-actuator%20cfa94275ccdb479ca8eb3ab829507e7a/Screencast_from_2024%25E5%25B9%25B4%25E4%25B8%2589%25E6%259C%258807%25E6%2597%25A5_15%25E6%2599%258206%25E5%2588%258652%25E7%25A7%2592.webm)
     
 
-reference:
+📃Reference:
 
 [https://answers.ros.org/question/360732/can-you-provide-an-example-of-publishing-commands-using-the-arm_controllercommand-topic-in-the-terminal/](https://answers.ros.org/question/360732/can-you-provide-an-example-of-publishing-commands-using-the-arm_controllercommand-topic-in-the-terminal/)
 
 [https://answers.ros.org/question/54962/understanding-trajectory_msgsjointtrajectory/](https://answers.ros.org/question/54962/understanding-trajectory_msgsjointtrajectory/)
 
-<aside>
-💡 Could not load controller 'arm_controller' because controller type 'position_controllers/JointTrajectoryController' does not exist.
+💡注意：Could not load controller 'arm_controller' because controller type 'position_controllers/JointTrajectoryController' does not exist.
 
-![Untitled](/assets/images/ROS-Mechanical-Arm-04-arm-actuator/Untitled01.png)
+![Untitled](/assets/images/ROS-Mechanical-Arm-04-arm-actuator%20cfa94275ccdb479ca8eb3ab829507e7a/Untitled%201.png)
 
 [https://answers.ros.org/question/254084/gazebo-could-not-load-controller-jointtrajectorycontroller-does-not-exist-mastering-ros-chapter-10/](https://answers.ros.org/question/254084/gazebo-could-not-load-controller-jointtrajectorycontroller-does-not-exist-mastering-ros-chapter-10/)
 
@@ -227,9 +226,7 @@ sudo apt-get install ros-noetic-joint-trajectory-controller
 sudo apt-get install ros*controller*
 ```
 
-[ERROR] [1709563170.207053491, 0.310000000]: Could not load controller 'joint_state_controller' because the type was not specified. Did you load the controller configuration on the parameter server (namespace: '/joint_state_controller')?
-
-![Untitled](/assets/images/ROS-Mechanical-Arm-04-arm-actuator/Untitled02.png)
+![Untitled](/assets/images/ROS-Mechanical-Arm-04-arm-actuator%20cfa94275ccdb479ca8eb3ab829507e7a/Untitled%202.png)
 
 ```python
 sudo apt-get install ros-noetic-joint-state-controller ＃This will install joint_state_controller package
@@ -246,12 +243,11 @@ sudo apt-get install ros-noetic-position-controllers ＃ This will install posit
     publish_rate: 50
 ```
 
-查詢目前控制器載入狀態
+### 查詢目前控制器載入狀態
 
 1. 先lunch所要的程式
-    1. 
     
-    ![Untitled](/assets/images/ROS-Mechanical-Arm-04-arm-actuator/Untitled03.png)
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-04-arm-actuator%20cfa94275ccdb479ca8eb3ab829507e7a/Untitled%203.png)
     
 2. 在另外一個terminal找尋
     
@@ -259,14 +255,12 @@ sudo apt-get install ros-noetic-position-controllers ＃ This will install posit
     rosservice list | grep controller_manager
     ```
     
-    ![Untitled](/assets/images/ROS-Mechanical-Arm-04-arm-actuator/Untitled04.png)
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-04-arm-actuator%20cfa94275ccdb479ca8eb3ab829507e7a/Untitled%204.png)
     
 
-</aside>
+📃Reference:
 
-reference:
-
-模型建立參考[https://www.notion.so/ROS-09d84546634447509510d80fec247ba5](https://www.notion.so/ROS-Mechanical-Arm-03-model-09d84546634447509510d80fec247ba5?pvs=21)
+模型建立參考:[https://www.notion.so/ROS-09d84546634447509510d80fec247ba5](https://www.notion.so/ROS-Mechanical-Arm-03-model-09d84546634447509510d80fec247ba5?pvs=21)
 
 [https://automaticaddison.com/how-to-build-a-simulated-robot-arm-using-ros/](https://automaticaddison.com/how-to-build-a-simulated-robot-arm-using-ros/)
 
