@@ -9,12 +9,11 @@ header:
 classes:
   - landing
   - dark-theme
-title:  "INTRODUCTION-to-KALMAN-FILTER"
+title:  "INTRODUCTION to KALMAN FILTER"
 date:   2023-11-30 14:00:00 +0800
 categories: KALMANFILTER
 ---
 
-# 2023-11-30-INTRODUCTION-to-KALMAN-FILTER.md
 
 ## 卡爾曼濾波器
 
