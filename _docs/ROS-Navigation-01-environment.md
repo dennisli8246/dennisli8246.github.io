@@ -1,3 +1,23 @@
+---
+title: "ROS建制機械手臂-02（定義碰撞與制動）"
+layout: collection
+permalink: /ROS-Navigation-01-environment/
+excerpt: "How to build a mechanical arm."
+last_modified_at: 2024-03-29T13:19:00-00:00
+classes: wide
+categories:
+  - ROS
+  - ROS建制機械機械手臂
+tags:
+  - ROS
+  - 機械手臂
+  - mechanical arm
+  - Gazebo
+redirect_from:
+  - /theme-setup/
+sidebar:
+  nav: "docs"
+---
 # ROS-Navigation-01-environment
 
 ## #ROS建立導航系統（環境建立）
@@ -45,7 +65,7 @@
     gazebo postoffice.world
     ```
     
-    ![Untitled](ROS-Navigation-01-environment%20f5c6372221ba4eba94895976a00c90f3/Untitled.png)
+    ![Untitled](/assets/images/ROS-Navigation-01-environment%20f5c6372221ba4eba94895976a00c90f3/Untitled.png)
     
 4. 修改/chapter5_ws/src/robot_description/launch/中的檔案mobile_manipulator_gazebo_control_xacro.launch
     
@@ -101,7 +121,7 @@
     roslaunch robot_description mobile_manipulator_gazebo_control_xacro.launch
     ```
     
-    ![Untitled](ROS-Navigation-01-environment%20f5c6372221ba4eba94895976a00c90f3/Untitled%201.png)
+    ![Untitled](/assets/images/ROS-Navigation-01-environment%20f5c6372221ba4eba94895976a00c90f3/Untitled%201.png)
     
 
 📃Reference: 
