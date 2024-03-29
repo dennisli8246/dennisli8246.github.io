@@ -14,7 +14,7 @@ date:   2023-10-20 14:00:00 +0800
 categories: C
 ---
 
-# 2023-10-20-hello world.md
+# 2023-10-20-hello world
 
 > *"HELLO WORLD"
 C 語言為 Dennis Ritchie 所設計的程式語言並且與 Ken Thompson 一起實作SINCE 1972*
