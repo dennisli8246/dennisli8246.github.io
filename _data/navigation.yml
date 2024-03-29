@@ -22,18 +22,17 @@ docs:
       - title: "04-arm-actuator"
         url: /ROS-Mechanical-Arm-04-arm-actuator/
       - title: "05-combine-base-arm"
-        url:  /ROS-Mechanical-Arm-05-combine-base-arm/
-     
+        url: /ROS-Mechanical-Arm-05-combine-base-arm/
   - title: ROS-Navigation
     children:
       - title: "01-environment"
-      url:  /ROS-Navigation-01-environment/
+        url: /ROS-Navigation-01-environment/
       - title: "02-LiDAR"
-      url:  /ROS-Navigation-02-LiDAR/
+        url: /ROS-Navigation-02-LiDAR/
       - title: "03-Moveit-control-arm"
-      url:  /ROS-Navigation-03-Moveit-control-arm/
+        url: /ROS-Navigation-03-Moveit-control-arm/
       - title: "04-built-map"
-      url:  /ROS-Navigation-04-built-map/
+        url: /ROS-Navigation-04-built-map/
       
 # sidebar navigation list sample
 sidebar-sample:
