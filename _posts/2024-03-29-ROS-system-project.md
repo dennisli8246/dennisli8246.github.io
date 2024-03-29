@@ -4,8 +4,8 @@ comments: true
 author_profile: true
 excerpt: "This is a project with ROS system"
 header:
-  image:
-  teaser:
+  image: /assets/images/ROS-Mechanical-Arm-01-base 3c4f28844b474c4eaa4e85a51c915b63/Untitled.png
+  teaser: assets/images/ROS-Mechanical-Arm-01-base 3c4f28844b474c4eaa4e85a51c915b63/Untitled.png
 classes:
   - landing
   - dark-theme
