@@ -2,7 +2,7 @@
 layout: single
 comments: true
 author_profile: true
-excerpt: "KALMAN-FILTER-with-MPU6050"
+excerpt: "KALMAN FILTER with MPU6050"
 header:
   overlay_image: https://ddnotbook.files.wordpress.com/2023/12/image.png?w=1024
   teaser: https://ddnotbook.files.wordpress.com/2023/12/image.png?w=1024
@@ -13,7 +13,7 @@ title:  "KALMAN-FILTER-with-MPU6050"
 date:   2023-12-01 14:00:00 +0800
 categories: KALMANFILTER
 ---
-# 2023-12-01-KALMAN-FILTER-with-MPU6050.md
+# KALMANFILER wit MPU6050
 
 ![https://ddnotbook.files.wordpress.com/2023/12/image.png?w=1024](https://ddnotbook.files.wordpress.com/2023/12/image.png?w=1024)
 
