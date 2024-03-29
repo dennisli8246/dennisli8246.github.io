@@ -20,43 +20,43 @@ sidebar:
 ---
 # ROS-Mechanical-Arm-05-combine-base-arm
 
-#ROS建制機械手臂（組合base＆arm）
+## #ROS建制機械手臂（組合base＆arm）
 
 如上兩節建立base與arm
 
 1. 將兩個模做連接,在~/chapter3_ws/src/robot_description/urdf 建立**mobile_manipulator.urdf.xacro**
+    
+    ```python
+    <?xml version="1.0"?>
+    
+    <robot xmlns:xacro="http://ros.org/wiki/xacro" name="robot_base" >
+    <xacro:include filename="$(find robot_description)/urdf/robot_base.urdf.xacro" />
+    <xacro:include filename="$(find robot_description)/urdf/robot_arm.urdf.xacro" />
+    <xacro:arm_joint prefix="arm_base_link" parent="base_link" child="arm_base" originxyz="0.20 0.0 0.145" originrpy="0 0 0" axis="0 0 1"/>
+    </robot>
+    ```
+    
 
-```python
-<?xml version="1.0"?>
+💡注意:
 
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="robot_base" >
-<xacro:include filename="$(find robot_description)/urdf/robot_base.urdf.xacro" />
-<xacro:include filename="$(find robot_description)/urdf/robot_arm.urdf.xacro" />
+呼叫arm_joint,會需要有axis的參數
 <xacro:arm_joint prefix="arm_base_link" parent="base_link" child="arm_base" originxyz="0.20 0.0 0.145" originrpy="0 0 0" axis="0 0 1"/>
-</robot>
-```
-
-<aside>
-💡 注意行會呼叫arm_joint,會需要有axis的參數
-<xacro:arm_joint prefix="arm_base_link" parent="base_link" child="arm_base" originxyz="0.20 0.0 0.145" originrpy="0 0 0" axis="0 0 1"/>
-
-</aside>
 
 1. 使用以下指令查看目前的組裝後模型,在~/chapter3_ws/底下
+    
+    ```python
+    initros1
+    source devel/setup.bash
+    roscd robot_description/urdf/
+    roslaunch urdf_tutorial display.launch model:=**mobile_manipulator.urdf.xacro**
+    ```
+    
 
-```python
-initros1
-source devel/setup.bash
-roscd robot_description/urdf/
-roslaunch urdf_tutorial display.launch model:=**mobile_manipulator.urdf.xacro**
-```
-
-<aside>
-💡 產生問題：
+💡產生問題：
 
 Failed to find root link: Two root links found: [base_link] and [world]
 
-![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm/Untitled.png)
+![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled.png)
 
 將arm_base修改為world測試
 
@@ -66,7 +66,7 @@ Failed to find root link: Two root links found: [base_link] and [world]
 
 可以看到的確可以組成但是在world與arm_base中有一個沒有銜接的空間,原因是在arm的模組中我們之前有加入一個world為link
 
-![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm/Untitled01.png)
+![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled%201.png)
 
 1. 兩個模型結構如下：
     
@@ -102,51 +102,49 @@ Failed to find root link: Two root links found: [base_link] and [world]
     
     →rear_right(joint)→rear_right(link)
     
-
-c. 用world連結合模型結構如下：
-
-base_link(root_link)
-
-→arm_base_link(joint)→arm_base(joint)→arm_base(link)→..→top_wrist(joint)
-
-→front_left(joint)→front_left(link)
-
-→front_right(joint)→front_right(link)
-
-→rear_left(joint)→rear_left(link)
-
-→rear_right(joint)→rear_right(link)
-
-</aside>
-
-將結構調整如下：
-
-base_link(root_link)
-
-→**arm_base_link**(joint)→arm_base(joint)→arm_base(link)→..→top_wrist(joint)
-
-→front_left(joint)→front_left(link)
-
-→front_right(joint)→front_right(link)
-
-→rear_left(joint)→rear_left(link)
-
-→rear_right(joint)→rear_right(link)
-
-只需要將robot_arm.urdf.xacro中的world的link跟相關的joint註解掉
-
-```python
-<!--#####<link name="world"/>###########-->
-<!--##<xacro:arm_joint prefix="arm_base" parent="world" child="arm_base" originxyz="0.0 0.0 0.1" originrpy="0 0 0"/>###-->
-```
-
-並且要在**mobile_manipulator.urdf.xacro的arm_base_link**(joint)改為**arm_base**(joint)**因為我們原本是用arm_base(joint)接world,但先在更改為接上base_link**
-
-結果如下：
-
-![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm/Untitled02.png)
-
-[Screencast from 2024年三月07日 20時45分39秒.webm](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm/Screencast_from_2024.webm)
+3. 用world連結合模型結構如下：
+    
+    base_link(root_link)
+    
+    →arm_base_link(joint)→arm_base(joint)→arm_base(link)→..→top_wrist(joint)
+    
+    →front_left(joint)→front_left(link)
+    
+    →front_right(joint)→front_right(link)
+    
+    →rear_left(joint)→rear_left(link)
+    
+    →rear_right(joint)→rear_right(link)
+    
+4. 將結構調整如下：
+    
+    base_link(root_link)
+    
+    →**arm_base_link**(joint)→arm_base(joint)→arm_base(link)→..→top_wrist(joint)
+    
+    →front_left(joint)→front_left(link)
+    
+    →front_right(joint)→front_right(link)
+    
+    →rear_left(joint)→rear_left(link)
+    
+    →rear_right(joint)→rear_right(link)
+    
+    只需要將robot_arm.urdf.xacro中的world的link跟相關的joint註解掉
+    
+    ```python
+    <!--#####<link name="world"/>###########-->
+    <!--##<xacro:arm_joint prefix="arm_base" parent="world" child="arm_base" originxyz="0.0 0.0 0.1" originrpy="0 0 0"/>###-->
+    ```
+    
+    並且要在**mobile_manipulator.urdf.xacro的arm_base_link**(joint)改為**arm_base**(joint)**因為我們原本是用arm_base(joint)接world,但先在更改為接上base_link**
+    
+5. 結果如下：
+    
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled%202.png)
+    
+    [Screencast from 2024年三月07日 20時45分39秒.webm](ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Screencast_from_2024%25E5%25B9%25B4%25E4%25B8%2589%25E6%259C%258807%25E6%2597%25A5_20%25E6%2599%258245%25E5%2588%258639%25E7%25A7%2592.webm)
+    
 
 1. 測試機械手臂,~chapter3_ws/src/robot_description/launch建立起動檔案mobile_manipulator_gazebo_control_xacro.launch
     1. [https://drive.google.com/drive/folders/1Acv58Up41u5pYDM5yE1jru_YoVbn_rCl](https://drive.google.com/drive/folders/1Acv58Up41u5pYDM5yE1jru_YoVbn_rCl)
@@ -179,21 +177,17 @@ base_link(root_link)
     roslaunch robot_description mobile_manipulator_gazebo_control_xacro.launch
     ```
     
-    <aside>
-    💡 Gazebo無法組裝
+    💡注意：Gazebo無法組裝問題
     
-    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm/Untitled03.png)
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled%203.png)
     
-    </aside>
+    💡注意：ERROR
     
-    <aside>
-    💡 ERROR
-    
-    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm/Untitled04.png)
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled%204.png)
     
     因為node有重複啟動的可能性
     
-    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm/Untitled05.png)
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled%205.png)
     
     衝突的可能性為
     
@@ -203,13 +197,11 @@ base_link(root_link)
     <!--#<xacro:include filename="$(find robot_description)/urdf/gazebo_essentials_base.xacro" />#-->
     ```
     
-    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm/Untitled06.png)
-    
-    </aside>
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled%206.png)
     
 3. 運行結果
     
-    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm/Untitled07.png)
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled%207.png)
     
 4. 列出所有topic
     
@@ -217,7 +209,7 @@ base_link(root_link)
     rostopic list
     ```
     
-    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm/Untitled08.png)
+    ![Untitled](ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled%208.png)
     
 5. 指令移動測試
     
@@ -229,7 +221,7 @@ base_link(root_link)
     rostopic pub /arm_controller/command trajectory_msgs/JointTrajectory '{joint_names: ["arm_base_joint","shoulder_joint", "bottom_wrist_joint", "elbow_joint","top_wrist_joint"], points: [{positions: [0, 0, 0, 0, 0], time_from_start: [1,0]}]}' -1
     ```
     
-    [Screencast from 2024年三月11日 17時46分49秒.webm](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm/Screencast_from_2024_1.webm)
+    [Screencast from 2024年三月11日 17時46分49秒.webm](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Screencast_from_2024%25E5%25B9%25B4%25E4%25B8%2589%25E6%259C%258811%25E6%2597%25A5_17%25E6%2599%258246%25E5%2588%258649%25E7%25A7%2592.webm)
     
 6. 在另外一個視窗開啟控制程式
     
@@ -244,7 +236,7 @@ base_link(root_link)
     rosrun rqt_robot_steering rqt_robot_steering
     ```
     
-    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm/Untitled%09.png)
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled%209.png)
     
     記得要改變控制的topic在GUI界面
     `/robot_base_velocity_controller/cmd_vel`
@@ -257,9 +249,9 @@ base_link(root_link)
     
 8. 全部效果如下
     
-    [Screencast from 2024年三月11日 17時57分34秒.webm](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm/Screencast_from_2024_2.webm)
+    [Screencast from 2024年三月11日 17時57分34秒.webm](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Screencast_from_2024%25E5%25B9%25B4%25E4%25B8%2589%25E6%259C%258811%25E6%2597%25A5_17%25E6%2599%258257%25E5%2588%258634%25E7%25A7%2592.webm)
     
 
-reference:
+📃Reference:
 
-參考：[https://automaticaddison.com/how-to-build-a-simulated-mobile-manipulator-using-ros/](https://automaticaddison.com/how-to-build-a-simulated-mobile-manipulator-using-ros/)
+[https://automaticaddison.com/how-to-build-a-simulated-mobile-manipulator-using-ros/](https://automaticaddison.com/how-to-build-a-simulated-mobile-manipulator-using-ros/)
