@@ -11,7 +11,7 @@ classes:
   - dark-theme
 title:  "INTRODUCTION-to-KALMAN-FILTER"
 date:   2023-11-30 14:00:00 +0800
-categories: ROS
+categories: KALMANFILTER
 ---
 
 # 2023-11-30-INTRODUCTION-to-KALMAN-FILTER.md
