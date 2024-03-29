@@ -1,10 +1,32 @@
+---
+title: "ROS建立導航系統（地圖建構）"
+layout: collection
+permalink: /ROS-Navigation-04-built-map/
+excerpt: "How to build a mechanical arm."
+last_modified_at: 2024-03-29T13:34:00-00:00
+classes: wide
+categories:
+  - ROS
+  - ROS建制機械機械手臂
+  - Navigation
+tags:
+  - ROS
+  - 機械手臂
+  - mechanical arm
+  - Gazebo
+  - Navigation
+redirect_from:
+  - /theme-setup/
+sidebar:
+  nav: "docs"
+---
 # ROS-Navigation-04-built-map
 
 ## #ROS建立導航系統（地圖建構）
 
 💡Note: Resource not found: navigation
 
-![Untitled](ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled.png)
+![Untitled](/assets/images/ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled.png)
 
 安裝navigation
 
@@ -16,7 +38,7 @@ sudo apt-get install ros-noetic-navigation
 
 另外注意mobile_manipulator_gazebo_control_xacro.launch檔案中find xxxxxxx為找資料夾如果沒有找到需要修改資料夾（robot_description）
 
-![Untitled](ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%201.png)
+![Untitled](/assets/images/ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%201.png)
 
 1. 啟動檔案與模型:~/chapter5_ws/
     
@@ -44,11 +66,11 @@ sudo apt-get install ros-noetic-navigation
     
     1. 要在左下角Add 加入 map
         
-        ![Untitled](ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%202.png)
+        ![Untitled](/assets/images/ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%202.png)
         
     2. 要在Topic選項中選擇/map
         
-        ![Untitled](ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%203.png)
+        ![Untitled](/assets/images/ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%203.png)
         
 4. 使用teleop節點指令使機器人在環境中四處走動
     
@@ -66,11 +88,11 @@ sudo apt-get install ros-noetic-navigation
     
     可以看到控制說明
     
-    ![Untitled](ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%204.png)
+    ![Untitled](/assets/images/ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%204.png)
     
 5. 測試效果
     
-    ![Untitled](ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%205.png)
+    ![Untitled](/assets/images/ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%205.png)
     
 6. 在新的Terminal中開啟以下來儲存
     
@@ -86,7 +108,7 @@ sudo apt-get install ros-noetic-navigation
     
     會存在所在路徑下
     
-    ![Untitled](ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%206.png)
+    ![Untitled](/assets/images/ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%206.png)
     
 7. 打開之前所存掃描ru的檔案postoffice.yaml
     1. 打開rivz開之前建立的地圖:r
@@ -115,7 +137,7 @@ sudo apt-get install ros-noetic-navigation
     
     e.  建立效果
     
-    ![Untitled](ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%207.png)
+    ![Untitled](/assets/images/ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%207.png)
     
 8. 選擇環境中的點
     1. 在/chapter5_ws/src/robot_description/launch建立兩個檔案
@@ -204,17 +226,17 @@ sudo apt-get install ros-noetic-navigation
         
         可以 看到所建立的圖形
         
-        ![Untitled](ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%208.png)
+        ![Untitled](/assets/images/ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%208.png)
         
     4. 可以使用（Publish Point）從rivz取得座標（左下角）
         
-        ![Untitled](ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%209.png)
+        ![Untitled](/assets/images/ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%209.png)
         
-        ![Untitled](ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%2010.png)
+        ![Untitled](/assets/images/ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%2010.png)
         
-        ![Untitled](ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%2011.png)
+        ![Untitled](/assets/images/ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%2011.png)
         
-        ![Untitled](ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%2012.png)
+        ![Untitled](/assets/images/ROS-Navigation-04-built-map%20f547c1d36f17456d90c4fc3296271dcf/Untitled%2012.png)
         
 
 📃Reference:
