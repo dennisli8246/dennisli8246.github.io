@@ -19,7 +19,6 @@ sidebar:
   nav: "docs"
 ---
 # ROS-Mechanical-Arm-05-combine-base-arm
-
 ## #ROS建制機械手臂（組合base＆arm）
 
 如上兩節建立base與arm
@@ -36,13 +35,12 @@ sidebar:
     </robot>
     ```
     
-
-💡注意:
-
-呼叫arm_joint,會需要有axis的參數
-<xacro:arm_joint prefix="arm_base_link" parent="base_link" child="arm_base" originxyz="0.20 0.0 0.145" originrpy="0 0 0" axis="0 0 1"/>
-
-1. 使用以下指令查看目前的組裝後模型,在~/chapter3_ws/底下
+    💡注意:
+    
+    呼叫arm_joint,會需要有axis的參數
+    <xacro:arm_joint prefix="arm_base_link" parent="base_link" child="arm_base" originxyz="0.20 0.0 0.145" originrpy="0 0 0" axis="0 0 1"/>
+    
+2. 使用以下指令查看目前的組裝後模型,在~/chapter3_ws/底下
     
     ```python
     initros1
@@ -51,24 +49,21 @@ sidebar:
     roslaunch urdf_tutorial display.launch model:=**mobile_manipulator.urdf.xacro**
     ```
     
-
-💡產生問題：
-
-Failed to find root link: Two root links found: [base_link] and [world]
-
-![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled.png)
-
-將arm_base修改為world測試
-
-```python
-<xacro:arm_joint prefix="arm_base_link" parent="base_link" child="arm_base" originxyz="0.20 0.0 0.145" originrpy="0 0 0"/>
-```
-
-可以看到的確可以組成但是在world與arm_base中有一個沒有銜接的空間,原因是在arm的模組中我們之前有加入一個world為link
-
-![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled%201.png)
-
-1. 兩個模型結構如下：
+    💡產生問題：Failed to find root link: Two root links found: [base_link] and [world]
+    
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled.png)
+    
+    將arm_base修改為world測試
+    
+    ```python
+    <xacro:arm_joint prefix="arm_base_link" parent="base_link" child="arm_base" originxyz="0.20 0.0 0.145" originrpy="0 0 0"/>
+    ```
+    
+    可以看到的確可以組成但是在world與arm_base中有一個沒有銜接的空間,原因是在arm的模組中我們之前有加入一個world為link
+    
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled%201.png)
+    
+3. 兩個模型結構如下：
     
     arm_module:
     
@@ -86,7 +81,7 @@ Failed to find root link: Two root links found: [base_link] and [world]
     
     →rear_right(joint)→rear_right(link)
     
-2. 結合模型結構如下(會造成Two root links found)：
+4. 結合模型結構如下(會造成Two root links found)：
     
     world(root_link)→arm_base_link(joint)→…….
     
@@ -102,7 +97,7 @@ Failed to find root link: Two root links found: [base_link] and [world]
     
     →rear_right(joint)→rear_right(link)
     
-3. 用world連結合模型結構如下：
+5. 用world連結合模型結構如下：
     
     base_link(root_link)
     
@@ -116,7 +111,7 @@ Failed to find root link: Two root links found: [base_link] and [world]
     
     →rear_right(joint)→rear_right(link)
     
-4. 將結構調整如下：
+6. 將結構調整如下：
     
     base_link(root_link)
     
@@ -139,11 +134,11 @@ Failed to find root link: Two root links found: [base_link] and [world]
     
     並且要在**mobile_manipulator.urdf.xacro的arm_base_link**(joint)改為**arm_base**(joint)**因為我們原本是用arm_base(joint)接world,但先在更改為接上base_link**
     
-5. 結果如下：
+7. 結果如下：
     
     ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled%202.png)
     
-    [Screencast from 2024年三月07日 20時45分39秒.webm](ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Screencast_from_2024%25E5%25B9%25B4%25E4%25B8%2589%25E6%259C%258807%25E6%2597%25A5_20%25E6%2599%258245%25E5%2588%258639%25E7%25A7%2592.webm)
+    [Screencast from 2024年三月07日 20時45分39秒.webm](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Screencast_from_2024%25E5%25B9%25B4%25E4%25B8%2589%25E6%259C%258807%25E6%2597%25A5_20%25E6%2599%258245%25E5%2588%258639%25E7%25A7%2592.webm)
     
 
 1. 測試機械手臂,~chapter3_ws/src/robot_description/launch建立起動檔案mobile_manipulator_gazebo_control_xacro.launch
@@ -209,7 +204,7 @@ Failed to find root link: Two root links found: [base_link] and [world]
     rostopic list
     ```
     
-    ![Untitled](ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled%208.png)
+    ![Untitled](/assets/images/ROS-Mechanical-Arm-05-combine-base-arm%20e829de5fd3a24f0c96adfc290c92b2ce/Untitled%208.png)
     
 5. 指令移動測試
     
