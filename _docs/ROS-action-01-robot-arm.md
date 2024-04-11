@@ -1,7 +1,7 @@
 ---
 title: "ROS-action-01-robot-arm"
 layout: collection
-permalink: /ROS-Mechanical-Arm-01-base/
+permalink: /ROS-action-01-robot-arm/
 excerpt: "How to build a mechanical arm."
 last_modified_at: 2024-04-11T14:41:05-04:00
 classes: wide
