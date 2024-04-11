@@ -4,7 +4,7 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Knowledge Base"
+  - title: "Project"
     url: /knowledge_base/
   - title: "Blog"
     url: /categories/
@@ -33,7 +33,16 @@ docs:
         url: /ROS-Navigation-03-Moveit-control-arm/
       - title: "04-built-map"
         url: /ROS-Navigation-04-built-map/
-      
+        
+  - title: ROS-action-and-SMACH
+    children:
+      - title: "ROS-action-01-robot-arm"
+        url: /ROS-action-01-robot-arm/
+      - title: "ROS-action-02-battery"
+        url: /ROS-action-02-battery/
+      - title: "ROS-SMACH"
+        url: /ROS-SMACH/
+        
 # sidebar navigation list sample
 sidebar-sample:
   - title: "Parent Page A"
