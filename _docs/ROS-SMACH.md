@@ -1,3 +1,21 @@
+---
+title: "ROS-SMACH"
+layout: collection
+permalink: /ROS-SMACH/
+excerpt: "How to build a mechanical arm."
+last_modified_at: 2024-04-11T14:41:05-04:00
+classes: wide
+categories:
+  - ROS
+tags:
+  - ROS
+  - mechanical arm
+  - Gazebo
+redirect_from:
+  - /theme-setup/
+sidebar:
+  nav: "docs"
+---
 # ROS-SMACH
 
 安裝SMACH-ROS
@@ -10,7 +28,7 @@ sudo apt-get install ros-noetic-smach ros-noetic-smach ros-noetic-executive-smac
 
 四個狀態機
 
-![notion-template.drawio.svg](ROS-SMACH%20369a7bc88035427ca29d6c02acd579a4/notion-template.drawio.svg)
+![notion-template.drawio.svg](/assets/images/ROS-SMACH%20369a7bc88035427ca29d6c02acd579a4/notion-template.drawio.svg)
 
 在~/chapter4_ws/src底下建立smach_example資料夾以及建立**simple_fsm.py**
 
@@ -121,7 +139,7 @@ rosrun smach_viewer smach_viewer.py
 
 ## 結果
 
-[Screencast from 2024年四月11日 14時25分57秒.webm](ROS-SMACH%20369a7bc88035427ca29d6c02acd579a4/Screencast_from_2024%25E5%25B9%25B4%25E5%259B%259B%25E6%259C%258811%25E6%2597%25A5_14%25E6%2599%258225%25E5%2588%258657%25E7%25A7%2592.webm)
+[Screencast from 2024年四月11日 14時25分57秒.webm](/assets/images/ROS-SMACH%20369a7bc88035427ca29d6c02acd579a4/Screencast_from_2024%25E5%25B9%25B4%25E5%259B%259B%25E6%259C%258811%25E6%2597%25A5_14%25E6%2599%258225%25E5%2588%258657%25E7%25A7%2592.webm)
 
 📃Reference:
 
