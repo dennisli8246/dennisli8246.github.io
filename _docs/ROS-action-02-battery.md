@@ -1,3 +1,21 @@
+---
+title: "ROS-action-02-battery"
+layout: collection
+permalink: /ROS-action-02-battery/
+excerpt: "How to build a mechanical arm."
+last_modified_at: 2024-04-11T14:50:05-04:00
+classes: wide
+categories:
+  - ROS
+tags:
+  - ROS
+  - mechanical arm
+  - Gazebo
+redirect_from:
+  - /theme-setup/
+sidebar:
+  nav: "docs"
+---
 # ROS-action-02-battery
 
 ## actionlib 範例
@@ -18,7 +36,7 @@
     catkin_create_pkg battery_simulator actionlib std_msgs
     ```
     
-    ![Untitled](ROS-action-02-battery%20264b85cc1b6a446b82c97f1232f53ce6/Untitled.png)
+    ![Untitled](/assets/images/ROS-action-02-battery%20264b85cc1b6a446b82c97f1232f53ce6/Untitled.png)
     
 2. 在~/chapter4_ws/src/battery_simulator底下建立actiony資料夾
     
@@ -181,7 +199,7 @@ if __name__ == '__main__':
 
 記得使用chmod +x 修改權限
 
-![Untitled](ROS-action-02-battery%20264b85cc1b6a446b82c97f1232f53ce6/Untitled%201.png)
+![Untitled](/assets/images/ROS-action-02-battery%20264b85cc1b6a446b82c97f1232f53ce6/Untitled%201.png)
 
 ## 測試
 
@@ -209,7 +227,7 @@ rosrun battery_simulator battery_sim_client.py 0
 rosrun battery_simulator battery_sim_client.py 1
 ```
 
-[Screencast from 2024年四月11日 08時58分18秒.webm](ROS-action-02-battery%20264b85cc1b6a446b82c97f1232f53ce6/Screencast_from_2024%25E5%25B9%25B4%25E5%259B%259B%25E6%259C%258811%25E6%2597%25A5_08%25E6%2599%258258%25E5%2588%258618%25E7%25A7%2592.webm)
+[Screencast from 2024年四月11日 08時58分18秒.webm](/assets/images/ROS-action-02-battery%20264b85cc1b6a446b82c97f1232f53ce6/Screencast_from_2024%25E5%25B9%25B4%25E5%259B%259B%25E6%259C%258811%25E6%2597%25A5_08%25E6%2599%258258%25E5%2588%258618%25E7%25A7%2592.webm)
 
 📃Reference:
 
