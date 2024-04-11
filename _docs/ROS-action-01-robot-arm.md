@@ -48,7 +48,7 @@ sidebar:
 
 其關係圖如下：
 
-![notion-template.drawio.svg](/assets/imagesROS-action-01-robot-arm%20d011de546cf34117b896e469452331e4/notion-template.drawio.svg)
+![notion-template.drawio.svg](/assets/images/ROS-action-01-robot-arm%20d011de546cf34117b896e469452331e4/notion-template.drawio.svg)
 
 ## 範例模擬
 
@@ -99,7 +99,7 @@ if __name__ == '__main__':
 
 1. 注意原本mobile_manipulator_gazebo_control_xacro.launch的節點
     
-    ![Untitled](/assets/imagesROS-action-01-robot-arm%20d011de546cf34117b896e469452331e4/Untitled%201.png)
+    ![Untitled](/assets/images/ROS-action-01-robot-arm%20d011de546cf34117b896e469452331e4/Untitled%201.png)
     
 2. 宣告節點：rospy.init_node('joint_position_tester')
 3. 定義Action的topic：client = actionlib.SimpleActionClient('arm_controller/follow_joint_trajectory', FollowJointTrajectoryAction)
@@ -114,7 +114,7 @@ if __name__ == '__main__':
 
 💡先把chapter4_ws底下的CMakeLists.txt刪除
 
-![Untitled](/assets/imagesROS-action-01-robot-arm%20d011de546cf34117b896e469452331e4/Untitled%202.png)
+![Untitled](/assets/images/ROS-action-01-robot-arm%20d011de546cf34117b896e469452331e4/Untitled%202.png)
 
 在使用catkin_make編譯工作空間
 
@@ -142,7 +142,7 @@ rosrun arm_client arm_action_client.py
 
 ## 顯示效果
 
-[Screencast from 2024年四月09日 18時30分41秒.webm](/assets/imagesROS-action-01-robot-arm%20d011de546cf34117b896e469452331e4/Screencast_from_2024%25E5%25B9%25B4%25E5%259B%259B%25E6%259C%258809%25E6%2597%25A5_18%25E6%2599%258230%25E5%2588%258641%25E7%25A7%2592.webm)
+[Screencast from 2024年四月09日 18時30分41秒.webm](/assets/images/ROS-action-01-robot-arm%20d011de546cf34117b896e469452331e4/Screencast_from_2024%25E5%25B9%25B4%25E5%259B%259B%25E6%259C%258809%25E6%2597%25A5_18%25E6%2599%258230%25E5%2588%258641%25E7%25A7%2592.webm)
 
 📃Reference:
 
