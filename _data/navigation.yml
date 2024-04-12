@@ -43,6 +43,17 @@ docs:
       - title: "ROS-SMACH"
         url: /ROS-SMACH/
         
+  - title: Machine-Leaning
+    children:
+      - title: "MNIST手寫數字辨識"
+        url: https://github.com/dennisli8246/Machine-Leaning/blob/main/Tensor_test_7_CNN.ipynb
+      - title: "IMDB評論分類"
+        url: https://github.com/dennisli8246/Machine-Leaning/blob/main/Tensor_test_11_8_LSTM_IMDB%E8%A9%95%E8%AB%96%E5%88%86%E9%A1%9E.ipynb
+      - title: "ResNet18模型—圖片分類"
+        url: https://github.com/dennisli8246/Machine-Leaning/blob/main/Tensor_test_8_3_ResNet18.ipynb
+      - title: "使用ResNet18來分類ants與bees"
+        url: https://github.com/dennisli8246/Machine-Leaning/blob/main/Tensor_test_8_6_resnet18.ipynb
+        
 # sidebar navigation list sample
 sidebar-sample:
   - title: "Parent Page A"
