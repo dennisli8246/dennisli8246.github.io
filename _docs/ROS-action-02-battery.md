@@ -16,7 +16,6 @@ redirect_from:
 sidebar:
   nav: "docs"
 ---
-# ROS-action-02-battery
 
 ## actionlib 範例
 
