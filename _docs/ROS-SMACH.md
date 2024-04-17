@@ -16,7 +16,6 @@ redirect_from:
 sidebar:
   nav: "docs"
 ---
-# ROS-SMACH
 
 安裝SMACH-ROS
 
