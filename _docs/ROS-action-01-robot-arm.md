@@ -17,8 +17,6 @@ sidebar:
   nav: "docs"
 ---
 
-# ROS-action-01-robot-arm
-
 ## 在章節ROS-Mechanical-Arm-05-combine-base-arm中啟動模型
 
 觀察ROS的topic
